@@ -1,1 +1,34 @@
-
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE agenda SYSTEM "agenda.dtd">
+<agenda>
+	<contacto codigo="c1">
+		<nombre>Paco</nombre>
+		<apellidos>Pulido</apellidos>
+		<movil empresa="Azarquiel">654435435</movil>
+		<movil>646456546</movil>
+		<fijo>93242342</fijo>
+		<email tipo="empresa">paco@kk.com</email>
+		<sexo>
+			<hombre />
+		</sexo>
+		<pareja codigo="c2" />
+		<comentario>El Profe</comentario>
+	</contacto>
+	<contacto codigo="c2">
+		<nombre>Loles</nombre>
+		<apellidos>Cano</apellidos>
+		<fijo>932928574</fijo>
+		<fijo>952237689</fijo>
+		<email tipo="personal">loles@kk.com</email>
+		<sexo>
+			<mujer />
+		</sexo>
+		<pareja codigo="c1" />
+		<comentario>La piva del profe</comentario>
+	</contacto>	
+	<contacto codigo="c3">
+		<nombre>Ana</nombre>
+		<apellidos>Ruiz</apellidos>
+		<comentario>la de Torrijos</comentario>
+	</contacto>	
+</agenda>
