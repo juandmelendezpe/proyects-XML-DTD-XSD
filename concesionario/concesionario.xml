@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concesionario SYSTEM "concesionario.dtd">
+<concesionario marca="Renault">
+	<coche nombre="Clio">
+		<modelo referencia="a">
+			<stock>7</stock>
+			<gasolina/>
+			<cilindrada>1200</cilindrada>
+			<puertas>5</puertas>
+			<caballos>79</caballos>
+		</modelo>
+		<modelo referencia="b">
+			<stock>3</stock>
+			<diesel></diesel>
+			<cilindrada>1600</cilindrada>
+			<puertas>5</puertas>
+			<caballos>100</caballos>
+		</modelo>
+		<modelo referencia="c">
+			<km>75000</km>
+			<diesel></diesel>
+			<cilindrada>1600</cilindrada>
+			<puertas>5</puertas>
+			<caballos>100</caballos>
+		</modelo>
+	</coche>
+	<coche nombre="Laguna">
+		<modelo referencia="d">
+			<stock>2</stock>
+			<gasolina/>
+			<cilindrada>2000</cilindrada>
+			<puertas>5</puertas>
+			<caballos>200</caballos>
+		</modelo>
+	</coche>
+	<reserva coche="d">
+		<nombre>Paco</nombre>
+		<direccion>c/cruz, 2</direccion>
+		<telefono>958232323</telefono>
+	</reserva>
+	<reserva coche="c">
+		<nombre>Luisa</nombre>
+		<telefono>953453789</telefono>
+	</reserva>
+</concesionario>

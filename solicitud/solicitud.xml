@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE solicitud SYSTEM "solicitud.dtd">
+<solicitud>
+	<solicitante>
+		<nombre>Alberto Rodríguez Alonso</nombre>
+		<anio>16</anio>
+		<direccion>
+			<calle>Avda. Reconquista</calle>
+			<numero>12</numero>
+			<piso>1</piso>
+			<letra>D</letra>
+		</direccion>
+		<telefono>698227182</telefono>
+		<telefono>925265789</telefono>
+	</solicitante>
+	<actividad>
+		<nombre>Natacion</nombre>
+		<nivel>3</nivel>
+	</actividad>
+	<peticion>C02</peticion>
+	<peticion>D03</peticion>
+	<peticion>A10</peticion>
+</solicitud>

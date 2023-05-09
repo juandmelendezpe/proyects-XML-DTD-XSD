@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE biblioteca SYSTEM "biblioteca.dtd">
+<biblioteca>
+	<libros>
+		<libro isbn="aa">
+			<titulo>El Quijote</titulo>
+			<autor nombre="Cervantes"/>
+			<ejemplar codigo="aaa"/>
+			<ejemplar codigo="aab"/>
+			<ejemplar codigo="aac"/>
+			<ejemplar codigo="aad"/>
+		</libro>
+		<libro isbn="bb">
+			<titulo>La Colmena</titulo>
+			<autor nombre="Cela"></autor>
+			<autor nombre="Pulido"></autor>
+			<ejemplar codigo="bba"></ejemplar>
+			<ejemplar codigo="bbb"></ejemplar>
+		</libro>
+	</libros>
+	<socios>
+		<socio dni="aaaaa">
+			<nombre>Paco</nombre>
+			<direccion>C/ sdfvsdfsdf</direccion>
+		</socio>
+		<socio dni="bbbbb">
+			<nombre>Ana</nombre>
+		</socio>
+		<socio dni="ccccc">
+			<nombre>Javier</nombre>
+		</socio>
+	</socios>
+	<prestamos>
+		<prestamo ejemplar="aac" socio="bbbbb">
+			<fecha>12/05/2014</fecha>
+		</prestamo>
+		<prestamo ejemplar="bba" socio="ccccc">
+			<fecha>11/05/2014</fecha>
+		</prestamo>
+	</prestamos>
+</biblioteca>

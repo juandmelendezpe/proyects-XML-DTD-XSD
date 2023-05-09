@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cartelera SYSTEM "E:\1º DAM\Lenguaje de Marcas\3º Ev\DTD y XSD\Ejercicios\8 cartelera\cartelera.dtd">
+<cartelera>
+	<pelicula codigo="N123">
+		<titulo>Avatar</titulo>
+		<nacionalidad>Española</nacionalidad>
+		<genero>Fantasia</genero>
+		<clasificacion edad="tp"></clasificacion>
+		<sinopsis>Dos muñecos azules muy molones</sinopsis>
+		<director>Alberto Pérez</director>
+		<reparto>
+			<actor>Alberto Pérez</actor>
+			<actor>Gloria de la Cruz</actor>
+		</reparto>
+	</pelicula>
+</cartelera>
+
