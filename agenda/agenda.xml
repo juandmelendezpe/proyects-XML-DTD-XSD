@@ -9,7 +9,7 @@
 		<fijo>93242342</fijo>
 		<email tipo="empresa">paco@kk.com</email>
 		<sexo>
-			<hombre />
+		<hombre/>
 		</sexo>
 		<pareja codigo="c2" />
 		<comentario>El Profe</comentario>

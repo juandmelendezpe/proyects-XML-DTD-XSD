@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pizzas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+<!--<pizzas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 
- xsi:noNamespaceSchemaLocation="pizzas.xsd">
-<!--<!DOCTYPE pizzas SYSTEM "pizzas.dtd">-->
+ xsi:noNamespaceSchemaLocation="pizzas.xsd">-->
+<!DOCTYPE pizzas SYSTEM "pizzas.dtd">
 
-				<!--<pizzas> -->
+<pizzas> 
 	<pizza nombre="barbacoa" precio="8">
 		<ingrediente nombre="Salsa Barbacoa"/>
 		<ingrediente nombre="Mozzarella"/>
