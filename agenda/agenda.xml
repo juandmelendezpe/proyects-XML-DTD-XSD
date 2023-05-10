@@ -4,7 +4,7 @@
  xsi:noNamespaceSchemaLocation="agenda.xsd">
 		<!-- <!DOCTYPE agenda SYSTEM "agenda.dtd">-->
 		<!--<agenda>-->
-	<contacto codigo="c1">
+		<contacto codigo="c1">
 		<nombre>Paco</nombre>
 		<apellidos>Pulido</apellidos>
 		<movil empresa="Azarquiel">654435435</movil>
