@@ -1,36 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    
     <xs:element name="agenda">
         <xs:complexType>
             <xs:sequence>
-                <xs:element ref="agenda" minOccurs="1" maxOccurs="unbounded" />
+                <xs:element ref="contacto" minOccurs="1" maxOccurs="unbounded"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
+
     <xs:element name="contacto">
         <xs:complexType>
-            <xs:attribute name="nombre" type="xs:string" use="required" />
-            <xs:attribute name="apellidos" type="xs:string" use="required" />
-            <xs:attribute name="movil" type="xs:double" use="required" />
-            <xs:attribute name="movil-empresa" type="xs:double" use="required" />
-            <xs:attribute name="fijo" type="xs:double" use="required" />
-            <xs:attribute name="email" type="xs:string" use="required" />
-            <xs:attribute name="email-tipo" type="xs:double" use="required" />
-            <xs:attribute name="pareja" type="xs:string" use="required" />
-            <xs:attribute name="comentario" type="xs:double" use="required" />
-
+            <xs:sequence>
+                <xs:element name="nombre" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="apellidos" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="movil" type="tipoMovil" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="fijo" type="tFijo" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="email" type="tipoEmail" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="sexo" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="pareja" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="comentario" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+            <xs:attribute name="codigo" type="xs:ID" use="required"/>
         </xs:complexType>
-
-
     </xs:element>
+    
+    <xs:complexType name="tipoMovil">
+        <xs:simpleContent>
+            <xs:extension base="tMovil">
+                <xs:attribute name="empresa" type="xs:string" use="optional"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:simpleType name="tMovil">
+        <xs:restriction base="xs:positiveInteger">
+            <xs:totalDigits value="9"/>
+            <xs:pattern value="(6|7)[0-9]{8}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tFijo">
+        <xs:restriction base="xs:positiveInteger">
+            <xs:totalDigits value="9"/>
+            <xs:pattern value="9[0-9]{8}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+    <xs:complexType name="tipoEmail">
+        <xs:simpleContent>
+            <xs:extension base="tEmail">
+                <xs:attribute name="tipo" type="tTipoEmail" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    
+    <xs:simpleType name="tEmail">
+        <xs:restriction base="xs:string">
+            <!--<xs:pattern value="[a-z0-9_.-]+@[a-z0-9_.-]+\.[a-z]{2,3}"/>-->
+            <xs:pattern value="[a-z0-9_.-]+@[a-z0-9_.-]+\.(es|com|edu|org|net)"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tTipoEmail">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="empresa"/>
+            <xs:enumeration value="personal"/>
+        </xs:restriction>
+    </xs:simpleType>
+
     <xs:element name="sexo">
         <xs:complexType>
             <xs:choice>
-                <xs:element name="hombre" type="xs:string" minOccurs="1" maxOccurs="unbounded" />
-                <xs:element name="mujer" type="xs:string" minOccurs="1" maxOccurs="unbounded" />
-                <xs:element name="otro" type="xs:string" minOccurs="1" maxOccurs="unbounded" />
-
+                <xs:element name="hombre">
+                    <xs:complexType/>
+                </xs:element>
+                <xs:element name="mujer">
+                    <xs:complexType/>
+                </xs:element>
+                <xs:element name="otros">
+                    <xs:complexType/>
+                </xs:element>
             </xs:choice>
         </xs:complexType>
     </xs:element>
+
+    <xs:element name="pareja">
+        <xs:complexType>
+            <xs:attribute name="codigo" type="xs:IDREF" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
 </xs:schema>
