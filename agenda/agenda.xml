@@ -4,7 +4,7 @@
  xsi:noNamespaceSchemaLocation="agenda.xsd">
 		<!-- <!DOCTYPE agenda SYSTEM "agenda.dtd">-->
 		<!--<agenda>-->
-		<contacto codigo="c1">
+	<contacto codigo="c1">
 		<nombre>Paco</nombre>
 		<apellidos>Pulido</apellidos>
 		<movil empresa="Azarquiel">654435435</movil>
@@ -17,6 +17,7 @@
 		<pareja codigo="c2" />
 		<comentario>El Profe</comentario>
 	</contacto>
+
 	<contacto codigo="c2">
 		<nombre>Loles</nombre>
 		<apellidos>Cano</apellidos>
@@ -29,9 +30,11 @@
 		<pareja codigo="c1" />
 		<comentario>La piva del profe</comentario>
 	</contacto>	
+
 	<contacto codigo="c3">
 		<nombre>Ana</nombre>
 		<apellidos>Ruiz</apellidos>
 		<comentario>la de Torrijos</comentario>
 	</contacto>	
+	
 </agenda>
