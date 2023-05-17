@@ -1,6 +1,6 @@
 <!ELEMENT solicitud (solicitante+,actividad+,peticion+)>
 
-<!ELEMENT solicitante (nombre*,anio*,telefono+)>
+<!ELEMENT solicitante (nombre,anio,telefono,telefono)>
 <!ELEMENT nombre (#PCDATA)>
 <!ELEMENT anio (#PCDATA)>
 <!ELEMENT telefono (#PCDATA)>
