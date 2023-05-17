@@ -1,2 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!ELEMENT element-name (#PCDATA)>
+<!ELEMENT poema (titulo,verso+)>
+<!ATTLIST poema fecha CDATA #REQUIRED>
+<!ELEMENT titulo (#PCDATA)>
+<!ATTLIST titulo abr CDATA #REQUIRED>
+<!ELEMENT verso (#PCDATA)>
