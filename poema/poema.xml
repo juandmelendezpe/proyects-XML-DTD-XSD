@@ -1,8 +1,11 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE poema SYSTEM "poema.dtd">
-<poema fecha="1915-12-01">
-	<titulo abr="ea">el alba</titulo>
-	<verso>Mi coraz�n oprimido</verso>
+<?xml version="1.0" encoding="UTF-8"?>
+<poema fecha="1915-12-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="poema.xsd">
+
+<!--<!DOCTYPE poema SYSTEM "poema.dtd">-->
+<!--<poema fecha="1915-12-01">-->
+	<titulo abr="ea">1234</titulo>
+	<verso>Mi corazon oprimido</verso>
 	<verso>late junto a la alborada</verso>
 	<verso>el dolor de sus amores...</verso>
 </poema>

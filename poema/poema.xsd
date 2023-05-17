@@ -1,7 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+   
+     
     <xs:element name="poema">
-        
+        <xs:complexType>
+            <xs:sequence>
+                <!--<xs:element ref="titulo" minOccurs="1" maxOccurs="1"/>-->
+                <xs:element name="titulo" type="tipoTitulo" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="verso" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="fecha" type="xs:date" use="optional"/>
+        </xs:complexType>
     </xs:element>
+
+
+    <xs:complexType name="tipoTitulo">
+        <xs:simpleContent>
+            <xs:extension base="xs:positiveInteger">
+                <xs:attribute name="abr" type="xs:string" use="required" />
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    
+
+    <!-- Opción peor porque no controlas el tipo del contenido del elemento  -->
+    <!-- mixed=true implica que tiene contenido, no indica su tipo -->
+    <!--<xs:element name="titulo">
+        <xs:complexType mixed="true">
+            <xs:attribute name="abr" type="xs:string" use="required" />
+        </xs:complexType>
+    </xs:element>-->
     
 </xs:schema>
