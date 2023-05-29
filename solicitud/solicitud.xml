@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE solicitud SYSTEM "solicitud.dtd">
-<solicitud>
+<solicitud xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="solicitud.xsd">
+<!--<!DOCTYPE solicitud SYSTEM "solicitud.dtd">-->
+<!--<solicitud>-->
 	<solicitante>
 		<nombre>Alberto Rodríguez Alonso</nombre>
-		<anio>16</anio>
+		<anio>2023</anio>
 		<direccion>
 			<calle>Avda. Reconquista</calle>
 			<numero>12</numero>

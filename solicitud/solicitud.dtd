@@ -5,15 +5,11 @@
 <!ELEMENT anio (#PCDATA)>
 <!ELEMENT telefono (#PCDATA)>
 <!ELEMENT telefono (#PCDATA)>
-
-<!ELEMENT direccion (calle,numero,piso,letra)>
+<!ELEMENT direccion (calle,numero,piso?,letra)>
 <!ELEMENT calle (#PCDATA)>
 <!ELEMENT numero (#PCDATA)>
 <!ELEMENT piso (#PCDATA)>
 <!ELEMENT letra (#PCDATA)>
-
 <!ELEMENT actividad (nombre,nivel)>
-<!ELEMENT nombre (#PCDATA)>
 <!ELEMENT nivel (#PCDATA)>
-
 <!ELEMENT peticion (#PCDATA)>
