@@ -1,2 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!ELEMENT element-name (#PCDATA)>
+<!ELEMENT cartelera (pelicula+)>
+<!ELEMENT pelicula (titulo,titulo_original?,nacionalidad,genero,(clasisficaion | sin_clasificacion),sinopsis,director,reparto,web?,cartel?)>
+<!ATTLIST pelicula
+codigo ID #REQUIERED
+duracion cdata #IMPLIED
+anio CDATA #IMPLIED>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT titulo_original (#PCDATA)>
+<!ELEMENT nacionalidad (#PCDATA)>
+<!ELEMENT genero (#PCDATA)>
+<!ELEMENT clasificacion (EMPTY)>
+<!ELEMENT clasificacion edad (8 | 12 | 18 | 18 | tp ) #REQUIRED)>
+<!ELEMENT sin_clasificar EMPTY)>
+<!ELEMENT sinopsis (#PCDATA)>
+<!ELEMENT  director(#PCDATA)>
+<!ELEMENT reparto (actor+)>
+<!ELEMENT web (#PCDATA)>
+<!ELEMENT cartel (#PCDATA)>
+<!ELEMENT actor (#PCDATA)>

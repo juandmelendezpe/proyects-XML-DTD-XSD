@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cartelera xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="cartelera.xsd">
+<concesionario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="concesionario.xsd">
 	<!--
 		código empieza por letra y a continuación dígitos
 		anio empieza por 2 y luego 3 dígitos más
@@ -40,4 +41,4 @@
 			<actor>El gato</actor>
 		</reparto>
 	</pelicula>
-</cartelera>
+</concesionario>

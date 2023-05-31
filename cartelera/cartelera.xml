@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE cartelera SYSTEM "E:\1º DAM\Lenguaje de Marcas\3º Ev\DTD y XSD\Ejercicios\8 cartelera\cartelera.dtd">
-<cartelera>
+<!--<cartelera xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="cartelera.dtd"><cartelera-->
+
+<!DOCTYPE pizzas SYSTEM "cartelera.dtd">
 	<pelicula codigo="N123">
 		<titulo>Avatar</titulo>
 		<nacionalidad>Española</nacionalidad>
@@ -13,5 +15,4 @@
 			<actor>Gloria de la Cruz</actor>
 		</reparto>
 	</pelicula>
-</cartelera>
-
+</cartelera-->
