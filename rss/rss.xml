@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<rss version="2.0" xmlnsatom="http://www.w3.org/2005/Atom" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="rss.xsd">
+<!--rss version="2.0" xmlnsatom="http://www.w3.org/2005/Atom" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="rss.xsd"-->
+	<!DOCTYPE rss SYSTEM "rss.dtd">
 	<channel>
 		<atomlink href="http://www.electronica2000.com/canal/rss.xml" rel="self" type="application/rss+xml"/>
-		<title>Título de blog o sitio</title>
+		<title>Tï¿½tulo de blog o sitio</title>
 		<link>http://www.dominio.com</link>
-		<description>Descripción del blog o sitio</description>
+		<description>Descripcion del blog o sitio</description>
 		<language>es-ES</language>
 		<copyright>todos los derechos reservados</copyright>
+
 		<image>
-			<title>Título de blog o sitio</title>
+			<title>Tï¿½tulo de blog o sitio</title>
 			<url>http://www.dominio.com/imagenes/logo.gif</url>
 			<link>http://www.dominio.com</link>
 			<width>100</width>
 			<height>50</height>
 		</image>
+
 		<item>
-			<title>Título del artículo</title>
+			<title>Tï¿½tulo del artï¿½culo</title>
 			<link>http://www.dominio.com/documento-xml.php</link>
 			<guid>http://www.dominio.com/documento-xml.php</guid>
-			<description>Breve descripción del tema</description>
+			<description>Breve descripciï¿½n del tema</description>
 			<pubDate>Wed, 27 Oct 2010 07:15:00 GMT+1</pubDate>
 			<category domain="http://www.dominio.com/php/">PHP</category>
 		</item>

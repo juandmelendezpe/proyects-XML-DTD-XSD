@@ -1,2 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!ELEMENT element-name (#PCDATA)>
+<!ELEMENT channel (channel+)>
+<!ELEMENT  channel (atomlink,title,link,description,language,copyright)>
+<!ATTLIST atomlink
+ href CDATA #REQUIRED
+ rel CDATA #IMPLIED
+ type CDATA #IMPLIED>
+<!ELEMENT title
+ 
+ >
