@@ -1,44 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<concesionario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-xsi:noNamespaceSchemaLocation="concesionario.xsd">
-	<!--
-		código empieza por letra y a continuación dígitos
-		anio empieza por 2 y luego 3 dígitos más
-	-->
-	<pelicula codigo="A31231" anio="2007">
-		<titulo>Matrix</titulo>
-		<titulo_original>Matrix EE</titulo_original>
-		<nacionalidad>EE.UU</nacionalidad>
-		<genero>Ciencia Ficción</genero>
-		<!--
-			edad solo valores: 7, 12, 16 ,18
-		-->
-		<clasificacion edad="18"/>
-		<sinopsis>La historia de Neo</sinopsis>
-		<director>Watchowski Sisters</director>
-		<reparto>
-			<actor>Keanu</actor>
-			<actor>Morfeo</actor>
-			<actor>Triniti</actor>
-		</reparto>
-		<web>www.matrix.com</web>
-		<cartel>www.cartelpeliculas.com/matrix.png</cartel>
-	</pelicula>
-	<!--
-		duracion xxh:xxm dos dígitos h : dos dígitos m
-	-->
-	<pelicula codigo="A23242" duracion="02h:08m">
-		<titulo>Alien</titulo>
-		<nacionalidad>EE.UU</nacionalidad>
-		<genero>Ciencia Ficción, Terror</genero>
-		<sin_clasificar/>
-		<sinopsis>Un alien muy malo que mata a la gente</sinopsis>
-		<director>Ridley Scott</director>
-		<reparto>
-			<actor>Ripley</actor>
-			<actor>El Androide</actor>
-			<actor>El Alien</actor>
-			<actor>El gato</actor>
-		</reparto>
-	</pelicula>
+<!--<!DOCTYPE concesionario SYSTEM "concesionario.dtd">
+<concesionario marca="Renault">-->
+<concesionario marca="Renault" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="concesionario.xsd">
+	<coche nombre="Clio">
+		<modelo referencia="a">
+			<stock>7</stock>
+			<gasolina/>
+			<cilindrada>1200</cilindrada>
+			<puertas>5</puertas>
+			<caballos>79</caballos>
+		</modelo>
+		<modelo referencia="b">
+			<stock>3</stock>
+			<diesel></diesel>
+			<cilindrada>1600</cilindrada>
+			<puertas>5</puertas>
+			<caballos>100</caballos>
+		</modelo>
+		<modelo referencia="c">
+			<km>75000</km>
+			<diesel></diesel>
+			<cilindrada>1600</cilindrada>
+			<puertas>5</puertas>
+			<caballos>100</caballos>
+		</modelo>
+	</coche>
+	<coche nombre="Laguna">
+		<modelo referencia="d">
+			<stock>2</stock>
+			<gasolina/>
+			<cilindrada>2000</cilindrada>
+			<puertas>5</puertas>
+			<caballos>200</caballos>
+		</modelo>
+	</coche>
+	<reserva coche="d">
+		<nombre>Paco</nombre>
+		<direccion>c/cruz, 2</direccion>
+		<telefono>958232323</telefono>
+	</reserva>
+	<reserva coche="c">
+		<nombre>Luisa</nombre>
+		<telefono>953453789</telefono>
+	</reserva>
 </concesionario>

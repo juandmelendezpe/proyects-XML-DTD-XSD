@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+ <!-- este primer enlase es para validar el archivo DTD - Y SE ENCUENTRA DESACTIVADO -->
+
+		<!-- <!DOCTYPE agenda SYSTEM "agenda.dtd">-->
+		<!--<agenda>-->
+
+<!-- este segundo enlase es para validar el archivo XSD - Y SE ENCUENTRA ACTIVADO-->
 <agenda xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 
  xsi:noNamespaceSchemaLocation="agenda.xsd">
-		<!-- <!DOCTYPE agenda SYSTEM "agenda.dtd">-->
-		<!--<agenda>-->
+
 	<contacto codigo="c1">
 		<nombre>Paco</nombre>
 		<apellidos>Pulido</apellidos>

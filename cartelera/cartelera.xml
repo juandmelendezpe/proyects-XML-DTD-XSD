@@ -1,18 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--<cartelera xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-xsi:noNamespaceSchemaLocation="cartelera.dtd"><cartelera-->
-
-<!DOCTYPE pizzas SYSTEM "cartelera.dtd">
-	<pelicula codigo="N123">
-		<titulo>Avatar</titulo>
-		<nacionalidad>Española</nacionalidad>
-		<genero>Fantasia</genero>
-		<clasificacion edad="tp"></clasificacion>
-		<sinopsis>Dos muñecos azules muy molones</sinopsis>
-		<director>Alberto Pérez</director>
+ <!-- este primer enlase es para validar el archivo DTD - Y SE ENCUENTRA ACTIVADO -->
+<!--DOCTYPE cartelera SYSTEM "cartelera.dtd"-->
+<!-- este segundo enlase es para validar el archivo XSD - Y SE ENCUENTRA desACTIVADO-->
+<cartelera xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="cartelera.xsd">
+	<!--cartelera-->
+	<pelicula codigo="A31231" anio="2007">
+		<!--
+			código empieza por letra y a continuación dígitos
+			anio empieza por 1 o 2 y luego 3 dígitos más
+		-->
+		<titulo>Matrix</titulo>
+		<titulo_original>Matrix EE</titulo_original>
+		<nacionalidad>EE.UU</nacionalidad>
+		<genero>Ciencia Ficción</genero>
+		<!--
+			edad solo valores: 7, 12, 16 ,18
+		-->
+		<clasificacion edad="18"/>
+		<sinopsis>La historia de Neo</sinopsis>
+		<director>Watchowski Sisters</director>
 		<reparto>
-			<actor>Alberto Pérez</actor>
-			<actor>Gloria de la Cruz</actor>
+			<actor>Keanu</actor>
+			<actor>Morfeo</actor>
+			<actor>Triniti</actor>
 		</reparto>
+		<web>www.matrix.com</web>
+		<cartel>www.cartelpeliculas.com/matrix.png</cartel>
 	</pelicula>
-</cartelera-->
+	<!--
+		duracion xxh:xxm dos dígitos h : dos dígitos m
+	-->
+	<pelicula codigo="A23242" duracion="02h:08m">
+		<titulo>Alien</titulo>
+		<titulo_original/>
+		<nacionalidad>Spain</nacionalidad>
+		<genero>Ciencia Ficción, Terror</genero>
+		<sin_clasificar/>
+		<sinopsis>Un alien muy malo que mata a la gente</sinopsis>
+		<director>Ridley Scott</director>
+		<reparto>
+			<actor>Ripley</actor>
+			<actor>El Androide</actor>
+			<actor>El Alien</actor>
+			<actor>El gato</actor>
+			</reparto>
+		<web>www.matrix.com</web>
+		<cartel>www.cartelpeliculas.com/matrix.png</cartel>
+	</pelicula>
+</cartelera>
