@@ -81,6 +81,7 @@
                 </xs:element>
                 <xs:element name="otros">
                     <xs:complexType/>
+                    
                 </xs:element>
             </xs:choice>
         </xs:complexType>
