@@ -1,9 +1,21 @@
-<!ELEMENT channel (channel+)>
-<!ELEMENT  channel (atomlink,title,link,description,language,copyright)>
-<!ATTLIST atomlink
- href CDATA #REQUIRED
- rel CDATA #IMPLIED
- type CDATA #IMPLIED>
-<!ELEMENT title
- 
- >
+<!ELEMENT rss (channel)>
+<!ATTLIST rss version CDATA #REQUIRED>
+<!ELEMENT  channel (atomlink, title, link, description, language, copyright, image, item)>
+<!ELEMENT atomlink (#PCDATA)>
+<!ATTLIST atomlink href CDATA #REQUIRED>
+<!ATTLIST atomlink rel CDATA #REQUIRED>
+<!ATTLIST atomlink type CDATA #REQUIRED>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT link (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT language (#PCDATA)>
+<!ELEMENT copyright (#PCDATA)>
+<!ELEMENT image (title,url,link,width,height)>
+<!ELEMENT url (#PCDATA)>
+ <!ELEMENT width (#PCDATA)>
+ <!ELEMENT height (#PCDATA)>
+ <!ELEMENT item (title,link,guid,description,pubDate,category)>
+ <!ELEMENT guid (#PCDATA)>
+ <!ELEMENT pubDate (#PCDATA)>
+ <!ELEMENT category (#PCDATA)>
+ <!ATTLIST category domain CDATA #REQUIRED>

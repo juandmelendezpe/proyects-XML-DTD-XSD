@@ -1,16 +1,17 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--rss version="2.0" xmlnsatom="http://www.w3.org/2005/Atom" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="rss.xsd"-->
 	<!DOCTYPE rss SYSTEM "rss.dtd">
+	<rss version="2.0">
 	<channel>
 		<atomlink href="http://www.electronica2000.com/canal/rss.xml" rel="self" type="application/rss+xml"/>
-		<title>T�tulo de blog o sitio</title>
+		<title>Titulo de blog o sitio</title>
 		<link>http://www.dominio.com</link>
 		<description>Descripcion del blog o sitio</description>
 		<language>es-ES</language>
 		<copyright>todos los derechos reservados</copyright>
 
 		<image>
-			<title>T�tulo de blog o sitio</title>
+			<title>Titulo de blog o sitio</title>
 			<url>http://www.dominio.com/imagenes/logo.gif</url>
 			<link>http://www.dominio.com</link>
 			<width>100</width>

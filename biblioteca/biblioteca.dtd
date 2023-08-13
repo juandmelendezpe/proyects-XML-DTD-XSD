@@ -1,2 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!ELEMENT element-name (#PCDATA)>
+<!ELEMENT biblioteca (libros,socios,prestamos)>
+<!ELEMENT libros (libro+)>
+<!ELEMENT libro (titulo,autor+,ejemplar+)>
+<!ATTLIST libro isbn ID #REQUIRED>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT autor (#PCDATA)>
+<!ATTLIST autor nombre CDATA #REQUIRED> 
+<!ELEMENT ejemplar (#PCDATA)>
+<!ATTLIST ejemplar codigo ID #REQUIRED>
+<!ELEMENT socios (socio+)>
+<!ELEMENT socio (nombre,direccion?)>
+<!ATTLIST socio dni CDATA #REQUIRED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT direccion (#PCDATA)>
+<!ELEMENT prestamos (prestamo+)>
+<!ELEMENT prestamo (fecha)>
+<!ATTLIST prestamo ejemplar CDATA #REQUIRED>
+<!ATTLIST prestamo socio CDATA #REQUIRED>
+<!ELEMENT fecha (#PCDATA)>
