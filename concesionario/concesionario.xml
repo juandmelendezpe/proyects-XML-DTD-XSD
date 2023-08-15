@@ -2,10 +2,11 @@
 <!--<!DOCTYPE concesionario SYSTEM "concesionario2.dtd">
 <concesionario marca="Renault">-->
 <concesionario marca="Renault" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:noNamespaceSchemaLocation="concesionario.xsd">
+ xsi:noNamespaceSchemaLocation="concesionario2.xsd">
 	<coche nombre="Clio">
 		<modelo referencia="a">
 			<stock>7</stock>
+
 			<gasolina/>
 			<cilindrada>1200</cilindrada>
 			<puertas>5</puertas>
