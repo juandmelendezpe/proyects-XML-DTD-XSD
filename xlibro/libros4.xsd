@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+<xs:element name="biblioteca">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="libro" minOccurs="1" maxOccurs="unbounded" />
+            </xs:sequence>
+            <xs:attribute name="ubicacion" type="xs:string" use="required" />
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="libro">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="titulo" minOccurs="1" maxOccurs="unbounded" />
+                <xs:element name="autor" minOccurs="1" maxOccurs="unbounded" />
+                <xs:element ref="editorial" minOccurs="1 " maxOccurs="1" />
+                <xs:element name="precio" minOccurs="1" maxOccurs="1" />
+                <xs:element name="stock" minOccurs="1" maxOccurs="1" />
+                <xs:element name="categoria" minOccurs="1" maxOccurs="1" />
+
+            </xs:sequence>
+            <xs:attribute name="isbn" type="xs:string" use="required" />
+            <xs:attribute name="fecha_publicacion" type="xs:string" use="required" />
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="editorial">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nombre" minOccurs="1 " maxOccurs="unbounded" />
+                <xs:element name="movil" type="TipoEmpleado" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element name="email" type="TipoEmail" minOccurs="1" maxOccurs="1" />
+                <xs:element ref="tipo" minOccurs="1" maxOccurs="1" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="TipoEmpleado">
+        <xs:simpleContent>
+            <xs:extension base="config_Movil">
+                <xs:attribute name="tTipoEmpleado" type="Empleado" use="optional" />
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:simpleType name="config_Movil">
+    <xs:restriction base="xs:positiveInteger" >
+        <xs:totalDigits value="9"/>
+        <xs:pattern value="(6|7)[0-9]{8}"/>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="Empleado">
+    <xs:restriction base="xs:string">
+        <xs:enumeration value="CEO"/>
+        <xs:enumeration value="CIO"/> 
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:complexType name="TipoEmail">
+    <xs:simpleContent>
+        <xs:extension base="tTipoEmail">
+            <xs:attribute name="tEmail"  type="EmpleadoEmail" use="required"></xs:attribute>
+        </xs:extension>
+    </xs:simpleContent>
+</xs:complexType>
+
+<xs:simpleType name="tTipoEmail">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="[a-z0-9_.-]+@[a-z0-9_.-]+\.(es|com|edu|org|net)"/>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="EmpleadoEmail">
+    <xs:restriction base="xs:string">
+        <xs:enumeration value="corporativo"/>
+        <xs:enumeration value="personal"/>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:element name="tipo">
+        <xs:complexType>
+            <xs:choice>
+                <xs:element name="pyme" >
+                    <xs:complexType/>
+                </xs:element>
+
+                <xs:element name="grande" >
+                    <xs:complexType/>
+                </xs:element>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+
+
+</xs:schema>

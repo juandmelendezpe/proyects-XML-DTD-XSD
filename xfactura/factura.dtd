@@ -1,0 +1,26 @@
+<!ATTLIST factura
+    numero ID #REQUIRED
+    fecha CDATA #REQUIRED>
+<!ELEMENT factura (nref, fpago, emisor, receptor, concepto*, baseimponible, totaliva, total)>
+<!ELEMENT nref (#PCDATA)>
+<!ELEMENT fpago (#PCDATA)>
+<!ELEMENT emisor (direccion, nif)>
+<!ATTLIST emisor empresa CDATA #REQUIRED>
+<!ELEMENT direccion (calle, numero, cp, localidad, provincia)>
+<!ELEMENT nif (#PCDATA)>
+<!ELEMENT calle (#PCDATA)>
+<!ELEMENT numero (#PCDATA)>
+<!ELEMENT cp (#PCDATA)>
+<!ELEMENT localidad (#PCDATA)>
+<!ELEMENT provincia (#PCDATA)>
+<!ELEMENT receptor (direccion, nif)>
+<!ATTLIST receptor empresa CDATA #REQUIRED>
+<!ELEMENT concepto (cantidad, preciouni, iva, importe)>
+<!ATTLIST concepto descripcion CDATA #REQUIRED>
+<!ELEMENT cantidad (#PCDATA)>
+<!ELEMENT preciouni (#PCDATA)>
+<!ELEMENT iva (#PCDATA)>
+<!ELEMENT importe (#PCDATA)>
+<!ELEMENT baseimponible (#PCDATA)>
+<!ELEMENT totaliva (#PCDATA)>
+<!ELEMENT total (#PCDATA)>

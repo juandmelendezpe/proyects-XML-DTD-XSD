@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- DTD 2 puntos - XSD 8 puntos-->
+<!-- En el XSD hay que definir los siguientes tipos de datos:
+-tipodecimalpositivo: Tiene que ser 0 o mayor y con un máximo de 2 decimales. (0,5 puntos)
+-tMovil: Formato de móvil, que pueda empezar en 6 o 7. (0,5 puntos)
+-tTipoEmpleado: Solo puede tener los valores CEO o CIO (0,5 puntos)
+-tEmail: validar un email, podrán tener ciertos caracteres especiales (. ó _ ó -) (0,5 puntos)
+-tTipoEmail: Solo puede tener los valores corporativo o personal (0,5 puntos)
+-->
+<biblioteca ubicacion="Avila" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="libros3.xsd">
+	<!--<!DOCTYPE biblioteca SYSTEM "libros4.dtd">
+<biblioteca ubicacion="Avila">-->
+	<libro isbn="978-3-16-148410-0" fecha_publicacion="2021-07-20">
+		<titulo>Introducción a la IA</titulo>
+		<autor>John Doe</autor>
+		<editorial>
+			<nombre>Editorial IA</nombre>
+			<movil tTipoEmpleado="CEO">645555222</movil>
+			<email tEmail="corporativo">john@gmail.com</email>
+			<tipo>
+				<pyme/>
+			</tipo>
+		</editorial>
+		<precio>25.99</precio>
+		<stock>50</stock>
+		<categoria>Ciencia</categoria>
+	</libro>
+	<libro isbn="978-3-16-148410-1" fecha_publicacion="2022-05-12">
+		<titulo>Avanzando en IA</titulo>
+		<autor>Jane Doe</autor>
+		<editorial>
+			<nombre>Editorial Advanced</nombre>
+			<movil tTipoEmpleado="CIO">654333222</movil>
+			<email tEmail="personal">jane@gmail.com</email>
+			<tipo>
+				<grande/>
+			</tipo>
+		</editorial>
+		<precio>35.99</precio>
+		<stock>40</stock>
+		<categoria>Tecnologia</categoria>
+	</libro>
+	<libro isbn="978-3-16-148410-2" fecha_publicacion="2023-01-15">
+		<titulo>IA en el mundo real</titulo>
+		<autor>Bob Doe</autor>
+		<editorial>
+			<nombre>Editorial Real</nombre>
+			<movil>654789123</movil>
+			<email tEmail="corporativo">bob@gmail.com</email>
+			<tipo>
+				<pyme />
+			</tipo>
+		</editorial>
+		<precio>45.99</precio>
+		<stock>30</stock>
+		<categoria>Realidad</categoria>
+	</libro>
+</biblioteca>

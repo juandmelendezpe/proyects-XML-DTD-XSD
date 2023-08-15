@@ -1,0 +1,19 @@
+<!ELEMENT biblioteca (libro+)>
+<!ATTLIST biblioteca ubicacion CDATA #REQUIRED>
+<!ELEMENT libro (titulo,autor,editorial,precio,stock,categoria)>
+<!ATTLIST libro isbn CDATA #REQUIRED>
+<!ATTLIST libro fecha_publicacion CDATA #REQUIRED>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT autor (#PCDATA)>
+<!ELEMENT editorial (nombre,movil,email,tipo)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT movil (#PCDATA)>
+<!ATTLIST movil tTipoEmpleado (CEO|CIO) #IMPLIED>
+<!ELEMENT email (#PCDATA)>
+<!ATTLIST email tEmail (corporativo|personal) #IMPLIED>
+<!ELEMENT tipo (pyme|grande)>
+<!ELEMENT pyme EMPTY>
+<!ELEMENT grande EMPTY>
+<!ELEMENT precio (#PCDATA)>
+<!ELEMENT stock (#PCDATA)>
+<!ELEMENT categoria (#PCDATA)>

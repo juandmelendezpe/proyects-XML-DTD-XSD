@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+  <xs:element name="factura">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nref" type="Tiponref" minOccurs="1" maxOccurs="1" />
+        <xs:element name="fpago" type="Tipofpago" minOccurs="1" maxOccurs="1" />
+        <xs:element ref="emisor" minOccurs="1" maxOccurs="1" />
+        <xs:element ref="receptor" minOccurs="1" maxOccurs="1" />
+        <xs:element ref="concepto" minOccurs="1" maxOccurs="unbounded" />
+        <xs:element name="baseimponible" type="xs:positiveInteger" minOccurs="1" maxOccurs="1" />
+        <xs:element name="totaliva" type="xs:positiveInteger" minOccurs="1" maxOccurs="1" />
+        <xs:element name="total" type="xs:positiveInteger" minOccurs="1" maxOccurs="1" />
+      </xs:sequence>
+      <xs:attribute name="numero" type="xs:ID" use="required" />
+      <xs:attribute name="fecha" type="xs:date" use="required" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:simpleType name="Tiponref">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9A-Z]{7}" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="Tipofpago">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="(Contado|Plazos)" />
+    </xs:restriction>
+  </xs:simpleType>
+
+
+  <xs:element name="emisor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="direccion" minOccurs="1" maxOccurs="1" />
+        <xs:element name="nif" type="Tiponif" minOccurs="1" maxOccurs="1" />
+      </xs:sequence>
+      <xs:attribute name="empresa" type="xs:string" use="required" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:simpleType name="Tiponif">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Z]-[0-9]{8}[A-Z]" />
+    </xs:restriction>
+  </xs:simpleType>
+
+
+  <xs:element name="receptor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="direccion" minOccurs="1" maxOccurs="1" />
+        <xs:element name="nif" type="Tiponif" minOccurs="1" maxOccurs="1" />
+      </xs:sequence>
+      <xs:attribute name="empresa" type="xs:string" use="required" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="direccion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="calle" type="xs:string" minOccurs="1" maxOccurs="1" />
+        <xs:element name="numero" type="xs:int" minOccurs="1" maxOccurs="1" />
+        <xs:element name="cp" type="Tipocp" minOccurs="1" maxOccurs="1" />
+        <xs:element name="localidad" type="xs:string" minOccurs="1" maxOccurs="1" />
+        <xs:element name="provincia" type="xs:string" minOccurs="1" maxOccurs="1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:simpleType name="Tipocp">
+    <xs:restriction base="xs:positiveInteger">
+      <xs:minInclusive value="10000" />
+      <xs:maxInclusive value="99999" />
+    </xs:restriction>
+  </xs:simpleType>
+
+
+  <xs:element name="concepto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="cantidad" type="xs:int" minOccurs="1" maxOccurs="1" />
+        <xs:element name="preciouni" type="xs:int" minOccurs="1" maxOccurs="1" />
+        <xs:element name="iva" type="Tipoiva" minOccurs="1" maxOccurs="1" />
+        <xs:element name="importe" type="tipodecimalpositivo" minOccurs="1" maxOccurs="1" />
+        <!--<xs:element
+        name="importe"  type="tipodecimalpositivo" minOccurs="1" maxOccurs="1"/>-->
+      </xs:sequence>
+      <xs:attribute name="descripcion" type="xs:string" use="required" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:simpleType name="Tipoiva">
+    <xs:restriction base="xs:positiveInteger">
+      <xs:pattern value="(4|8|18)"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="tipodecimalpositivo">
+    <xs:restriction base="xs:decimal">
+      <xs:minInclusive value="0"/>
+    <xs:fractionDigits value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+
+</xs:schema>

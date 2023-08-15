@@ -47,6 +47,8 @@
         </xs:restriction>
     </xs:simpleType>
 
+<!-- UN EJEMPLO DE COMO SE CONFIG LOS CASOS DE ELEMENTOS CON ATRIBUTOS- PERO SIN HIJOS Y
+    SOLO CON PARA METROS ESPECIFICOS-->
 
     <xs:complexType name="tipoEmail">
         <xs:simpleContent>
@@ -69,6 +71,10 @@
             <xs:enumeration value="personal"/>
         </xs:restriction>
     </xs:simpleType>
+
+
+
+    
 
     <xs:element name="sexo">
         <xs:complexType>
