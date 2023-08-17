@@ -72,10 +72,6 @@
         </xs:restriction>
     </xs:simpleType>
 
-
-
-    
-
     <xs:element name="sexo">
         <xs:complexType>
             <xs:choice>
@@ -87,7 +83,6 @@
                 </xs:element>
                 <xs:element name="otros">
                     <xs:complexType/>
-                    
                 </xs:element>
             </xs:choice>
         </xs:complexType>

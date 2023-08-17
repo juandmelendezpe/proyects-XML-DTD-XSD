@@ -2,7 +2,8 @@
  <!-- este primer enlase es para validar el archivo DTD - Y SE ENCUENTRA ACTIVADO -->
 <!--DOCTYPE cartelera SYSTEM "cartelera.dtd"-->
 <!-- este segundo enlase es para validar el archivo XSD - Y SE ENCUENTRA desACTIVADO-->
-<cartelera xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="cartelera.xsd">
+<cartelera xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="cartelera.xsd">
 	<!--cartelera-->
 	<pelicula codigo="A31231" anio="2007">
 		<!--

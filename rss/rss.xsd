@@ -1,6 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xs:element name="root-element">
-        
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  elementFormDefault ="qualified">
+    <xs:element name="rss">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="channel" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="version" type="xs:string" use="required"/>
+            <xs:attribute name="xmlnsatom" type="xs:string" use="required"/>
+        </xs:complexType>
     </xs:element>
-</xs:schema>
+
+    <xs:element name="channel">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="atomlink" minOccurs="1" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:attribute name="href" type="xs:string" use="required" />
+                        <xs:attribute name="rel" type="xs:string" use="required" />
+                        <xs:attribute name="type" type="xs:string" use="required" />
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="title" minOccurs="1" maxOccurs="1" />
+                <xs:element name="link" minOccurs="1" maxOccurs="1" />
+                <xs:element name="description" minOccurs="1" maxOccurs="1" />
+                <xs:element name="language" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="copyright" minOccurs="1" maxOccurs="1" />
+                <xs:element ref="image" minOccurs="1" maxOccurs="1" />
+                <xs:element ref="item" minOccurs="1" maxOccurs="1" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="image">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="title" minOccurs="1" maxOccurs="1" />
+                <xs:element name="url" minOccurs="1" maxOccurs="1" />
+                <xs:element name="link" minOccurs="1" maxOccurs="1" />
+                <xs:element name="width" minOccurs="1" maxOccurs="1" />
+                <xs:element name="height" minOccurs="1" maxOccurs="1" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="item">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="title" minOccurs="1" maxOccurs="1" />
+                <xs:element name="link" minOccurs="1" maxOccurs="1" />
+                <xs:element name="guid" minOccurs="1" maxOccurs="1" />
+                <xs:element name="description" minOccurs="1" maxOccurs="1" />
+                <xs:element name="pubDate" minOccurs="1" maxOccurs="1" />
+                <xs:element name="category" type="tipocategoria" minOccurs="1" maxOccurs="1">
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="tipocategoria">
+        <xs:simpleContent>
+            <xs:extension base="tcategoria">
+                <xs:attribute name="domain" type="xs:string" use="required"></xs:attribute>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:simpleType name="tcategoria">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="PHP"/>
+            <xs:pattern value="JAVA"/>
+            <xs:pattern value="REACT"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    
+
+</xs:schema>        

@@ -1,39 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 
-<xs:element name="concesionario">
-
-<xs:complexType>
-
-    <xs:sequence>
-        <xs:element ref="coche" minOccurs="1" maxOccurs="unbounded"/>
-        <xs:element ref="reserva" minOccurs="0" maxOccurs="unbounded"/>
-
-    
-    </xs:sequence>  
-    <xs:attribute name="marca" type="xs:string" use ="required"/>
-
-</xs:complexType>
-
-</xs:element>
-
-    <xs:element name="coche" >
-    <xs:complexType>
-    
-    <xs:sequence>
-    <xs:element ref="modelo" minOccurs="1" maxOccurs="unbounded"/>
-    </xs:sequence>
-    
-    <xs:attribute name="nombre" type="xs:string" use="required"/>
-    </xs:complexType>
-
+    <xs:element name="concesionario">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="coche" minOccurs="1" maxOccurs="unbounded"/>
+                <xs:element ref="reserva" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="marca" type="xs:string" use ="required"/>
+        </xs:complexType>
     </xs:element>
 
-    <xs:element name="modelo" >
-    <xs:complexType>
-        <xs:sequence>
-        <xs:element name="stock" type="xs:positiveInteger" minOccurs="0" maxOccurs="1"/>
-        <xs:element name="km" type="xs:positiveInteger" minOccurs="0" maxOccurs="1"/>
+    <xs:element name="coche">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="modelo" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="nombre" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="modelo">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="stock" type="xs:positiveInteger" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="km" type="xs:positiveInteger" minOccurs="0" maxOccurs="1"/>
                 <xs:choice>
                     <xs:element name="gasolina">
                         <xs:complexType/>

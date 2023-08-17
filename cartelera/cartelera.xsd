@@ -19,7 +19,7 @@
                 <xs:complexType>
                     <xs:attribute name="edad" type="xs:string" use="required"/>
                 </xs:complexType>
-                </xs:element>
+            </xs:element>
                 <xs:element name="sin_clasificar">
                     <xs:complexType/>
                 </xs:element>
